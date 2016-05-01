@@ -153,16 +153,19 @@ img {
 #youtube {
 
 //background-color: pink;
+        -webkit-animation-delay: 0.5s;
 
 }
 #twitter {
         float: right;
 //        margin-right: 85px;
         text-align: center;
+        -webkit-animation-delay: 0.5s;
 }
 #logo {
         position: absolute;
         left: calc(50% - 2%);
+        -webkit-animation-delay: 0.5s;
 }
 .nav li a {
   text-decoration: none;
