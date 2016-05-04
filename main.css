@@ -187,3 +187,19 @@ h4 {
   //border-right: 1px solid #ccc;
   background-color: #525252;
 }
+#liveBanner {
+        background-color: yellow;
+width: 100%;
+height: 60px;
+margin: auto;
+padding: 0px;
+position: absolute;
+top: -10px;
+left: 0px;
+
+color: black;
+text-align: center;
+font-size: 25px;
+line-height: 20px;
+vertical-align: middle;
+}
