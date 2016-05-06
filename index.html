@@ -10,7 +10,7 @@
                 <title>Mending Books Sold</title>
         </head>
         <header>
-                <a  class="animated lightSpeedIn" id="liveBanner" href="http://beam.pro/impulseSV" style="display: none;"><p>ImpulseSV is Live Right Now! Watch Now!</p></a>
+                <a  class="animated lightSpeedIn" id="liveBanner" href="http://beam.pro/impulseSV" style="display: none;"><p id="liveBannerText">ImpulseSV is Live Right Now! Watch Now!</p></a>
 
                 <div class="nav" >
                     <ul class="animated  fadeInDown" id="navigationBar">
@@ -32,11 +32,20 @@
                             var theTime = new Date();
                             var theWeekday = theTime.getDay();
                             var theHour = theTime.getHours();
-                            console.log("Hour: " + theHour + ' Day: ' + theWeekday);
+                            var theMinutes = theTime.getMinutes();
+                            console.log("Hour: " + theHour + 'min: ' + theMinutes +' Day: ' + theWeekday);
                             if (theWeekday == 4) {
-                            if (theHour >= 19 && theHour <= 23) {
+                            if (theHour >= 22 && theHour <= 24) {
+                                    if (theMinutes <= 30) {
+                                            console.log("Show Pre Banner");
+                                            var timeTillStream  = 30 - theMinutes
+                                            $('#liveBannerText').html('ImpulseSV Goes Live In About ' + timeTillStream + ' Minutes! Click Here To Watch!');
+                                            window.setInterval(showBanner, 1500);
+                                    }else {
                                     console.log("Show Banner");
+                                     $('#liveBannerText').html('ImpulseSV is Live Right Now! Click Here To Watch!');
                                     window.setInterval(showBanner, 1500);
+                            }
                             }else {
                                     $('#liveBanner').css('display', 'hidden');
                                     $('#liveBanner').css('top', '-10px');
