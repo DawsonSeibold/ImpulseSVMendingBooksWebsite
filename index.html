@@ -11,6 +11,7 @@
         </head>
         <header>
                 <a  class="animated lightSpeedIn" id="liveBanner" href="http://beam.pro/impulseSV" style="display: none;"><p id="liveBannerText">ImpulseSV is Live Right Now! Watch Now!</p></a>
+        <!--         <a  class="animated lightSpeedIn" id="TwitterBanner"  style="display: none;" target="_blank" href="http://ctt.ec/695M9"><p id="liveBannerText">ImpulseSV is Live Right Now! Watch Now!</p></a> -->
 
                 <div class="nav" >
                     <ul class="animated  fadeInDown" id="navigationBar">
@@ -34,27 +35,55 @@
                             var theHour = theTime.getHours();
                             var theMinutes = theTime.getMinutes();
                             console.log("Hour: " + theHour + 'min: ' + theMinutes +' Day: ' + theWeekday);
-                            if (theWeekday == 4) {
-                            if (theHour >= 22 && theHour <= 24) {
-                                    if (theMinutes <= 30) {
+                            if (theWeekday == 4) { //4
+                            if (theHour >= 22 && theHour <= 24) {  //22 24
+                                    if (theMinutes <= 30) { //30
                                             console.log("Show Pre Banner");
                                             var timeTillStream  = 30 - theMinutes
                                             $('#liveBannerText').html('ImpulseSV Goes Live In About ' + timeTillStream + ' Minutes! Click Here To Watch!');
+                                            $('#liveBanner').attr('href', 'http://beam.pro/impulseSV')
+                                            $('#liveBanner').css('background-color', 'yellow');
+                                            $('#liveBanner').css('color', 'black');
                                             window.setInterval(showBanner, 1500);
                                     }else {
                                     console.log("Show Banner");
                                      $('#liveBannerText').html('ImpulseSV is Live Right Now! Click Here To Watch!');
+                                     $('#liveBanner').attr('href', 'http://beam.pro/impulseSV')
+                                     $('#liveBanner').css('background-color', 'yellow');
+                                     $('#liveBanner').css('color', 'black');
                                     window.setInterval(showBanner, 1500);
                             }
                             }else {
+                                    randomiseTwitterBanner();
                                     $('#liveBanner').css('display', 'hidden');
                                     $('#liveBanner').css('top', '-10px');
                                     $('#navigationBar').css('top', "0");
                             }
                     }else {
+                            randomiseTwitterBanner();
                             $('#liveBanner').css('display', 'hidden');
                             $('#liveBanner').css('top', '-10px');
                             $('#navigationBar').css('top', "0");
+                    }
+
+                    function randomiseTwitterBanner() {
+                            var randomNumber = Math.floor((Math.random() * 10) + 1);
+                            console.log("random: "+ randomNumber + ", Equals: "+ randomNumber % 2);
+                            if (randomNumber % 2 == 0) {
+
+                                        console.log("Show Banner");
+                                         $('#liveBannerText').html('Enjoying our website? Tell Us! Click to tweet. #ImpulseMendingBookStore');
+                                         $('#liveBanner').attr('href', 'http://ctt.ec/idcsq')
+                                         $('#liveBanner').css('background-color', '#EA2663');
+                                         $('#liveBanner').css('color', 'white');
+                                        window.setInterval(showBanner, 2500);
+                                }else {
+                                        $('#liveBannerText').html('Have a suggestion to make this site better? Click To Tell Us! #ImpulseMendingBookStore');
+                                        $('#liveBanner').attr('href', 'http://ctt.ec/idcsq')
+                                        $('#liveBanner').css('background-color', '#EA2663');
+                                        $('#liveBanner').css('color', 'white');
+                                       window.setInterval(showBanner, 2500);
+                                }
                     }
 
                     function showBanner() {
@@ -85,12 +114,17 @@
 
         <body>
                 <h2 class="animated  bounceInLeft" id="mendingTitle">Number of Mending Books Sold:</h2>
-                <h1 class="animated  bounceInDown" id="soldBooksNum">159</h1>
+                <h1 class="animated  bounceInDown" id="soldBooksNum">171</h1>
 
                 <hr>
 
                 <h3 class="animated  bounceInRight">Diamonds Made:</h3>
-                <h3  class="animated  bounceInUp" id="dimonadsMade">795</h3>
+                <h3  class="animated  bounceInUp" id="dimonadsMade">855</h3> <!-- after cubfans cut:    831 -->
+
+                <hr>
+
+                <h3>After Cubfans Cut:</h3>
+                <h3  class="animated  bounceInUp" id="dimonadsMade">831</h3>
 
                 <script>
 
