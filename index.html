@@ -46,6 +46,7 @@
                                             $('#liveBanner').css('background-color', 'yellow');
                                             $('#liveBanner').css('color', 'black');
                                             window.setInterval(showBanner, 1500);
+                                            document.title = 'LIVE in ' + timeTillStream + ' Minutes!';
                                     }else {
                                     console.log("Show Banner");
                                      $('#liveBannerText').html('ImpulseSV is Live Right Now! Click Here To Watch!');
@@ -53,6 +54,7 @@
                                      $('#liveBanner').css('background-color', 'yellow');
                                      $('#liveBanner').css('color', 'black');
                                     window.setInterval(showBanner, 1500);
+                                    document.title = 'LIVE Right Now!';
                             }
                             }else {
                                     randomiseTwitterBanner();
