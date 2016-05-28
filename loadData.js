@@ -17,5 +17,5 @@ myFirebaseRef.child("afterCut").on("value", function(snapshot) {
 
 myFirebaseRef.child("updatedOn").on("value", function(snapshot) {
   //alert(snapshot.val());  // Alerts "San Francisco"
-  $('#updatedOn').html('Updated On ' + snapshot.val());
+  $('#updatedOn').html('Updated On ' + snapshot.val() + ' <br> We have decided to discontinue updating this website. Tweet <a href="http://ctt.ec/6bdff"></a>#ImpulseMendingBookStore</a> if you would like to help update the website or reasons you would like us to keep updating it.');
 });
