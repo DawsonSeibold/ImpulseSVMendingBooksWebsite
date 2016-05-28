@@ -49,6 +49,15 @@ hr {
         width: 25%;
 }
 
+#updatedOn {
+        text-align: center;
+}
+
+#updatedOn a {
+        color: blue;
+        text-decoration: underline;
+}
+
 footer {
         //background-color: orange;
         margin: 0px;
