@@ -51,10 +51,11 @@ hr {
 
 #updatedOn {
         text-align: center;
+        font-size: 15px;
 }
 
 #updatedOn a {
-        color: #39B8FF;
+        color: #EA2663;
         text-decoration: underline;
 }
 
